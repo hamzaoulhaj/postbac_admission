@@ -5,8 +5,7 @@ import numpy as np
 from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import make_pipeline
-from sklearn.preprocessing import FunctionTransformer, StandardScaler, \
-    OneHotEncoder
+from sklearn.preprocessing import OneHotEncoder
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestRegressor
 
@@ -17,7 +16,7 @@ def get_estimator():
         'school_status','category_school','path','year','department','region_name'
     ]
     drop_cols = [
-        "super_path","sub_path","nb_applicants_female","nb_admitted_female"
+        "super_path","sub_path"
     ]
 
     categorical_transformer = Pipeline(steps=[
